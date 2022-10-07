@@ -1,8 +1,6 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { registerAPI, loginAPI } from "../api/auth";
-import { createBrowserHistory } from "history";
+import { loginAPI } from "../api/auth";
 import { LoginResponse } from "config/ResponseContant";
-export const browserHistory = createBrowserHistory();
 
 export const logoutUser = createAsyncThunk("auth/logout", async () => {
   localStorage.removeItem("jwtToken");
